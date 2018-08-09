@@ -19,6 +19,7 @@ function hasSubTree(tree1, tree2) {
   if (tree1 ===null || tree2 === null) {
     return false;
   }
+  // 如果根节点相同进入isSubTree方法，如果不同则比较左子树与给定树，如果不同则比较右字数与给定树
   return isSubTree(tree1, tree2) || hasSubTree(tree1.left, tree2) || hasSubTree(tree1.right, tree2)
 }
 //   树1                 树2         
